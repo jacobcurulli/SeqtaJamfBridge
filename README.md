@@ -19,10 +19,16 @@ What do you need to get this working
 ```
 Read only access to the SEQTA server. You will need to contact SEQTA support for this.
 Python 3.8
+Required Python packages
 	- psycopg2
 	- configparser
-Microsoft Education licensing
-A configured SDS profile - sds.microsoft.com
+	- ElementTree
+	- csv
+	- configparser
+	- requests
+	- datetime
+	- numpy
+Jamf Pro
 ```
 
 ### Installing
@@ -34,10 +40,9 @@ If you check a teacher timetable and look at the class name in the top left of t
 
 You need to rename the example.config.ini file to config.ini and put in the correct database credentials
 
-I wanted to have one admin account on all of the Teams so that I could easily manage them. 
-To do this I created an account on Office365 (or local AD if syncing) called teamsadmin. The script adds this user to all Teams.
-You can change this username in the config.ini file to whatever account you create. The user id for this admin account is set to 9999
-It MUST be unique and not a code used by your teachers. I doubt many schools have 9998 teachers, or have had that many. But be mindful of this.
+I wanted to have one extra teacher account on all of the classes so that they coud be easily managed.
+In the config file you can declare this teacher account - it must be an account on the Jamf Pro server or an existing teacher account.
+
 
 ```
 
